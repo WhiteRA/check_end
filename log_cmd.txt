@@ -1,0 +1,444 @@
+Welcome to Ubuntu 23.04 (GNU/Linux 6.2.0-39-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Fri Dec  8 04:57:12 AM UTC 2023
+
+  System load:  0.01               Processes:               126
+  Usage of /:   26.6% of 11.21GB   Users logged in:         1
+  Memory usage: 3%                 IPv4 address for enp0s3: 10.27.7.19
+  Swap usage:   0%
+
+
+49 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+New release '23.10' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+Last login: Fri Dec  8 04:57:12 2023 from 10.27.7.10
+user@srvu23:~$ sudo su
+[sudo] password for user:
+root@srvu23:/home/user# echo "Dog, Cat, Hamsters" > "Pets"
+root@srvu23:/home/user# echo "Horses, Camels, Donkeys" > "Pack_animals"
+root@srvu23:/home/user# cat "Pets" "pack_a^C
+root@srvu23:/home/user# cat "" mals"
+>
+.bash_history              .cache/                    .profile
+.bash_logout               Pack_animals               .ssh/
+.bashrc                    Pets                       .sudo_as_admin_successful
+>
+.bash_history              .cache/                    .profile
+.bash_logout               Pack_animals               .ssh/
+.bashrc                    Pets                       .sudo_as_admin_successful
+> 1
+> q
+> ^C
+root@srvu23:/home/user# cat "Pets" "Pack_animals" > "animal_friends"
+root@srvu23:/home/user# cat animal_friends
+Dog, Cat, Hamsters
+Horses, Camels, Donkeys
+root@srvu23:/home/user# mv "animal_friends" "new_animal_friends"
+root@srvu23:/home/user# cat new_anumal_friends
+cat: new_anumal_friends: No such file or directory
+root@srvu23:/home/user# cat new_animal_friends
+Dog, Cat, Hamsters
+Horses, Camels, Donkeys
+root@srvu23:/home/user# sudo add-apt-repository 'deb http://repo.mysql.com/apt/ubuntu/ bionic mysql-8.0'
+Repository: 'deb http://repo.mysql.com/apt/ubuntu/ bionic mysql-8.0'
+Description:
+Archive for codename: bionic components: mysql-8.0
+More info: http://repo.mysql.com/apt/ubuntu/
+Adding repository.
+Press [ENTER] to continue or Ctrl-c to cancel.
+Adding deb entry to /etc/apt/sources.list.d/archive_uri-http_repo_mysql_com_apt_ubuntu_-lunar.list
+Adding disabled deb-src entry to /etc/apt/sources.list.d/archive_uri-http_repo_mysql_com_apt_ubuntu_-lunar.list
+Hit:1 http://ru.archive.ubuntu.com/ubuntu lunar InRelease
+Get:2 http://repo.mysql.com/apt/ubuntu bionic InRelease [20.0 kB]
+Hit:3 http://ru.archive.ubuntu.com/ubuntu lunar-updates InRelease
+Hit:4 http://ru.archive.ubuntu.com/ubuntu lunar-backports InRelease
+Hit:5 http://ru.archive.ubuntu.com/ubuntu lunar-security InRelease
+Err:2 http://repo.mysql.com/apt/ubuntu bionic InRelease
+  The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 467B942D3A79BD29
+Reading package lists... Done
+W: GPG error: http://repo.mysql.com/apt/ubuntu bionic InRelease: The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 467B942D3A79BD29
+E: The repository 'http://repo.mysql.com/apt/ubuntu bionic InRelease' is not signed.
+N: Updating from such a repository can't be done securely, and is therefore disabled by default.
+N: See apt-secure(8) manpage for repository creation and user configuration details.
+root@srvu23:/home/user# sudo apt update
+Hit:1 http://ru.archive.ubuntu.com/ubuntu lunar InRelease
+Get:2 http://repo.mysql.com/apt/ubuntu bionic InRelease [20.0 kB]
+Hit:3 http://ru.archive.ubuntu.com/ubuntu lunar-updates InRelease
+Hit:4 http://ru.archive.ubuntu.com/ubuntu lunar-backports InRelease
+Err:2 http://repo.mysql.com/apt/ubuntu bionic InRelease
+  The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 467B942D3A79BD29
+Hit:5 http://ru.archive.ubuntu.com/ubuntu lunar-security InRelease
+Reading package lists... Done
+W: GPG error: http://repo.mysql.com/apt/ubuntu bionic InRelease: The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 467B942D3A79BD29
+E: The repository 'http://repo.mysql.com/apt/ubuntu bionic InRelease' is not signed.
+N: Updating from such a repository can't be done securely, and is therefore disabled by default.
+N: See apt-secure(8) manpage for repository creation and user configuration details.
+root@srvu23:/home/user# sudo apt install mysql-server
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  libcgi-fast-perl libcgi-pm-perl libclone-perl libencode-locale-perl libevent-pthreads-2.1-7 libfcgi-bin
+  libfcgi-perl libfcgi0ldbl libhtml-parser-perl libhtml-tagset-perl libhtml-template-perl libhttp-date-perl
+  libhttp-message-perl libio-html-perl liblwp-mediatypes-perl libmecab2 libprotobuf-lite32 libtimedate-perl
+  liburi-perl mecab-ipadic mecab-ipadic-utf8 mecab-utils mysql-client-8.0 mysql-client-core-8.0 mysql-common
+  mysql-server-8.0 mysql-server-core-8.0
+Suggested packages:
+  libdata-dump-perl libipc-sharedcache-perl libbusiness-isbn-perl libregexp-ipv6-perl libwww-perl mailx tinyca
+The following NEW packages will be installed:
+  libcgi-fast-perl libcgi-pm-perl libclone-perl libencode-locale-perl libevent-pthreads-2.1-7 libfcgi-bin
+  libfcgi-perl libfcgi0ldbl libhtml-parser-perl libhtml-tagset-perl libhtml-template-perl libhttp-date-perl
+  libhttp-message-perl libio-html-perl liblwp-mediatypes-perl libmecab2 libprotobuf-lite32 libtimedate-perl
+  liburi-perl mecab-ipadic mecab-ipadic-utf8 mecab-utils mysql-client-8.0 mysql-client-core-8.0 mysql-common
+  mysql-server mysql-server-8.0 mysql-server-core-8.0
+0 upgraded, 28 newly installed, 0 to remove and 49 not upgraded.
+Need to get 29.7 MB of archives.
+After this operation, 243 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://ru.archive.ubuntu.com/ubuntu lunar/main amd64 mysql-common all 5.8+1.1.0 [6,626 B]
+Get:2 http://ru.archive.ubuntu.com/ubuntu lunar-updates/main amd64 mysql-client-core-8.0 amd64 8.0.35-0ubuntu0.23.04.1 [2,774 kB]
+Get:3 http://ru.archive.ubuntu.com/ubuntu lunar-updates/main amd64 mysql-client-8.0 amd64 8.0.35-0ubuntu0.23.04.1 [22.4 kB]
+Get:4 http://ru.archive.ubuntu.com/ubuntu lunar/main amd64 libevent-pthreads-2.1-7 amd64 2.1.12-stable-8ubuntu3 [7,808 B]
+Get:5 http://ru.archive.ubuntu.com/ubuntu lunar/main amd64 libmecab2 amd64 0.996-14build14 [200 kB]
+Get:6 http://ru.archive.ubuntu.com/ubuntu lunar/main amd64 libprotobuf-lite32 amd64 3.21.12-1ubuntu7 [231 kB]
+Get:7 http://ru.archive.ubuntu.com/ubuntu lunar-updates/main amd64 mysql-server-core-8.0 amd64 8.0.35-0ubuntu0.23.04.1 [17.6 MB]
+51% [7 mysql-server-core-8.0 14.2 MB/17.6 MB 81%]                                                  652 kB/s 18s^C
+root@srvu23:/home/user# sudo apt install mysql-server
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  libcgi-fast-perl libcgi-pm-perl libclone-perl libencode-locale-perl libevent-pthreads-2.1-7 libfcgi-bin
+  libfcgi-perl libfcgi0ldbl libhtml-parser-perl libhtml-tagset-perl libhtml-template-perl libhttp-date-perl
+  libhttp-message-perl libio-html-perl liblwp-mediatypes-perl libmecab2 libprotobuf-lite32 libtimedate-perl
+  liburi-perl mecab-ipadic mecab-ipadic-utf8 mecab-utils mysql-client-8.0 mysql-client-core-8.0 mysql-common
+  mysql-server-8.0 mysql-server-core-8.0
+Suggested packages:
+  libdata-dump-perl libipc-sharedcache-perl libbusiness-isbn-perl libregexp-ipv6-perl libwww-perl mailx tinyca
+The following NEW packages will be installed:
+  libcgi-fast-perl libcgi-pm-perl libclone-perl libencode-locale-perl libevent-pthreads-2.1-7 libfcgi-bin
+  libfcgi-perl libfcgi0ldbl libhtml-parser-perl libhtml-tagset-perl libhtml-template-perl libhttp-date-perl
+  libhttp-message-perl libio-html-perl liblwp-mediatypes-perl libmecab2 libprotobuf-lite32 libtimedate-perl
+  liburi-perl mecab-ipadic mecab-ipadic-utf8 mecab-utils mysql-client-8.0 mysql-client-core-8.0 mysql-common
+  mysql-server mysql-server-8.0 mysql-server-core-8.0
+0 upgraded, 28 newly installed, 0 to remove and 49 not upgraded.
+Need to get 26.5 MB/29.7 MB of archives.
+After this operation, 243 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://ru.archive.ubuntu.com/ubuntu lunar-updates/main amd64 mysql-server-core-8.0 amd64 8.0.35-0ubuntu0.23.04.1 [17.6 MB]
+Get:2 http://ru.archive.ubuntu.com/ubuntu lunar-updates/main amd64 mysql-server-8.0 amd64 8.0.35-0ubuntu0.23.04.1 [1,432 kB]
+Get:3 http://ru.archive.ubuntu.com/ubuntu lunar/main amd64 libhtml-tagset-perl all 3.20-6 [11.3 kB]
+Get:4 http://ru.archive.ubuntu.com/ubuntu lunar/main amd64 liburi-perl all 5.17-1ubuntu1 [80.3 kB]
+Get:5 http://ru.archive.ubuntu.com/ubuntu lunar/main amd64 libhtml-parser-perl amd64 3.81-1 [87.9 kB]
+Get:6 http://ru.archive.ubuntu.com/ubuntu lunar/main amd64 libcgi-pm-perl all 4.55-1 [188 kB]
+Get:7 http://ru.archive.ubuntu.com/ubuntu lunar/main amd64 libfcgi0ldbl amd64 2.4.2-2build2 [28.0 kB]
+Get:8 http://ru.archive.ubuntu.com/ubuntu lunar/main amd64 libfcgi-perl amd64 0.82+ds-2 [21.7 kB]
+Get:9 http://ru.archive.ubuntu.com/ubuntu lunar/main amd64 libcgi-fast-perl all 1:2.15-1 [10.5 kB]
+Get:10 http://ru.archive.ubuntu.com/ubuntu lunar/main amd64 libclone-perl amd64 0.46-1 [10.9 kB]
+Get:11 http://ru.archive.ubuntu.com/ubuntu lunar/main amd64 libencode-locale-perl all 1.05-3 [11.6 kB]
+Get:12 http://ru.archive.ubuntu.com/ubuntu lunar/main amd64 libfcgi-bin amd64 2.4.2-2build2 [11.2 kB]
+Get:13 http://ru.archive.ubuntu.com/ubuntu lunar/main amd64 libhtml-template-perl all 2.97-2 [60.2 kB]
+Get:14 http://ru.archive.ubuntu.com/ubuntu lunar/main amd64 libtimedate-perl all 2.3300-2 [34.0 kB]
+Get:15 http://ru.archive.ubuntu.com/ubuntu lunar/main amd64 libhttp-date-perl all 6.05-2 [9,946 B]
+Get:16 http://ru.archive.ubuntu.com/ubuntu lunar/main amd64 libio-html-perl all 1.004-3 [15.9 kB]
+Get:17 http://ru.archive.ubuntu.com/ubuntu lunar/main amd64 liblwp-mediatypes-perl all 6.04-2 [20.1 kB]
+Get:18 http://ru.archive.ubuntu.com/ubuntu lunar/main amd64 libhttp-message-perl all 6.44-1 [77.4 kB]
+Get:19 http://ru.archive.ubuntu.com/ubuntu lunar/main amd64 mecab-utils amd64 0.996-14build14 [4,796 B]
+Get:20 http://ru.archive.ubuntu.com/ubuntu lunar/main amd64 mecab-ipadic all 2.7.0-20070801+main-3 [6,718 kB]
+Get:21 http://ru.archive.ubuntu.com/ubuntu lunar/main amd64 mecab-ipadic-utf8 all 2.7.0-20070801+main-3 [4,384 B]
+Get:22 http://ru.archive.ubuntu.com/ubuntu lunar-updates/main amd64 mysql-server all 8.0.35-0ubuntu0.23.04.1 [9,470 B]
+Fetched 11.9 MB in 18s (665 kB/s)
+Preconfiguring packages ...
+Selecting previously unselected package mysql-common.
+(Reading database ... 75569 files and directories currently installed.)
+Preparing to unpack .../0-mysql-common_5.8+1.1.0_all.deb ...
+Unpacking mysql-common (5.8+1.1.0) ...
+Selecting previously unselected package mysql-client-core-8.0.
+Preparing to unpack .../1-mysql-client-core-8.0_8.0.35-0ubuntu0.23.04.1_amd64.deb ...
+Unpacking mysql-client-core-8.0 (8.0.35-0ubuntu0.23.04.1) ...
+Selecting previously unselected package mysql-client-8.0.
+Preparing to unpack .../2-mysql-client-8.0_8.0.35-0ubuntu0.23.04.1_amd64.deb ...
+Unpacking mysql-client-8.0 (8.0.35-0ubuntu0.23.04.1) ...
+Selecting previously unselected package libevent-pthreads-2.1-7:amd64.
+Preparing to unpack .../3-libevent-pthreads-2.1-7_2.1.12-stable-8ubuntu3_amd64.deb ...
+Unpacking libevent-pthreads-2.1-7:amd64 (2.1.12-stable-8ubuntu3) ...
+Selecting previously unselected package libmecab2:amd64.
+Preparing to unpack .../4-libmecab2_0.996-14build14_amd64.deb ...
+Unpacking libmecab2:amd64 (0.996-14build14) ...
+Selecting previously unselected package libprotobuf-lite32:amd64.
+Preparing to unpack .../5-libprotobuf-lite32_3.21.12-1ubuntu7_amd64.deb ...
+Unpacking libprotobuf-lite32:amd64 (3.21.12-1ubuntu7) ...
+Selecting previously unselected package mysql-server-core-8.0.
+Preparing to unpack .../6-mysql-server-core-8.0_8.0.35-0ubuntu0.23.04.1_amd64.deb ...
+Unpacking mysql-server-core-8.0 (8.0.35-0ubuntu0.23.04.1) ...
+Setting up mysql-common (5.8+1.1.0) ...
+update-alternatives: using /etc/mysql/my.cnf.fallback to provide /etc/mysql/my.cnf (my.cnf) in auto mode
+Selecting previously unselected package mysql-server-8.0.
+(Reading database ... 75783 files and directories currently installed.)
+Preparing to unpack .../00-mysql-server-8.0_8.0.35-0ubuntu0.23.04.1_amd64.deb ...
+adduser: Warning: The home dir /nonexistent you specified can't be accessed: No such file or directory
+Unpacking mysql-server-8.0 (8.0.35-0ubuntu0.23.04.1) ...
+Selecting previously unselected package libhtml-tagset-perl.
+Preparing to unpack .../01-libhtml-tagset-perl_3.20-6_all.deb ...
+Unpacking libhtml-tagset-perl (3.20-6) ...
+Selecting previously unselected package liburi-perl.
+Preparing to unpack .../02-liburi-perl_5.17-1ubuntu1_all.deb ...
+Unpacking liburi-perl (5.17-1ubuntu1) ...
+Selecting previously unselected package libhtml-parser-perl:amd64.
+Preparing to unpack .../03-libhtml-parser-perl_3.81-1_amd64.deb ...
+Unpacking libhtml-parser-perl:amd64 (3.81-1) ...
+Selecting previously unselected package libcgi-pm-perl.
+Preparing to unpack .../04-libcgi-pm-perl_4.55-1_all.deb ...
+Unpacking libcgi-pm-perl (4.55-1) ...
+Selecting previously unselected package libfcgi0ldbl:amd64.
+Preparing to unpack .../05-libfcgi0ldbl_2.4.2-2build2_amd64.deb ...
+Unpacking libfcgi0ldbl:amd64 (2.4.2-2build2) ...
+Selecting previously unselected package libfcgi-perl.
+Preparing to unpack .../06-libfcgi-perl_0.82+ds-2_amd64.deb ...
+Unpacking libfcgi-perl (0.82+ds-2) ...
+Selecting previously unselected package libcgi-fast-perl.
+Preparing to unpack .../07-libcgi-fast-perl_1%3a2.15-1_all.deb ...
+Unpacking libcgi-fast-perl (1:2.15-1) ...
+Selecting previously unselected package libclone-perl:amd64.
+Preparing to unpack .../08-libclone-perl_0.46-1_amd64.deb ...
+Unpacking libclone-perl:amd64 (0.46-1) ...
+Selecting previously unselected package libencode-locale-perl.
+Preparing to unpack .../09-libencode-locale-perl_1.05-3_all.deb ...
+Unpacking libencode-locale-perl (1.05-3) ...
+Selecting previously unselected package libfcgi-bin.
+Preparing to unpack .../10-libfcgi-bin_2.4.2-2build2_amd64.deb ...
+Unpacking libfcgi-bin (2.4.2-2build2) ...
+Selecting previously unselected package libhtml-template-perl.
+Preparing to unpack .../11-libhtml-template-perl_2.97-2_all.deb ...
+Unpacking libhtml-template-perl (2.97-2) ...
+Selecting previously unselected package libtimedate-perl.
+Preparing to unpack .../12-libtimedate-perl_2.3300-2_all.deb ...
+Unpacking libtimedate-perl (2.3300-2) ...
+Selecting previously unselected package libhttp-date-perl.
+Preparing to unpack .../13-libhttp-date-perl_6.05-2_all.deb ...
+Unpacking libhttp-date-perl (6.05-2) ...
+Selecting previously unselected package libio-html-perl.
+Preparing to unpack .../14-libio-html-perl_1.004-3_all.deb ...
+Unpacking libio-html-perl (1.004-3) ...
+Selecting previously unselected package liblwp-mediatypes-perl.
+Preparing to unpack .../15-liblwp-mediatypes-perl_6.04-2_all.deb ...
+Unpacking liblwp-mediatypes-perl (6.04-2) ...
+Selecting previously unselected package libhttp-message-perl.
+Preparing to unpack .../16-libhttp-message-perl_6.44-1_all.deb ...
+Unpacking libhttp-message-perl (6.44-1) ...
+Selecting previously unselected package mecab-utils.
+Preparing to unpack .../17-mecab-utils_0.996-14build14_amd64.deb ...
+Unpacking mecab-utils (0.996-14build14) ...
+Selecting previously unselected package mecab-ipadic.
+Preparing to unpack .../18-mecab-ipadic_2.7.0-20070801+main-3_all.deb ...
+Unpacking mecab-ipadic (2.7.0-20070801+main-3) ...
+Selecting previously unselected package mecab-ipadic-utf8.
+Preparing to unpack .../19-mecab-ipadic-utf8_2.7.0-20070801+main-3_all.deb ...
+Unpacking mecab-ipadic-utf8 (2.7.0-20070801+main-3) ...
+Selecting previously unselected package mysql-server.
+Preparing to unpack .../20-mysql-server_8.0.35-0ubuntu0.23.04.1_all.deb ...
+Unpacking mysql-server (8.0.35-0ubuntu0.23.04.1) ...
+Setting up libmecab2:amd64 (0.996-14build14) ...
+Setting up mysql-client-core-8.0 (8.0.35-0ubuntu0.23.04.1) ...
+Setting up libfcgi0ldbl:amd64 (2.4.2-2build2) ...
+Setting up libclone-perl:amd64 (0.46-1) ...
+Setting up libhtml-tagset-perl (3.20-6) ...
+Setting up liblwp-mediatypes-perl (6.04-2) ...
+Setting up libfcgi-bin (2.4.2-2build2) ...
+Setting up libencode-locale-perl (1.05-3) ...
+Setting up mecab-utils (0.996-14build14) ...
+Setting up libio-html-perl (1.004-3) ...
+Setting up libtimedate-perl (2.3300-2) ...
+Setting up mysql-client-8.0 (8.0.35-0ubuntu0.23.04.1) ...
+Setting up libfcgi-perl (0.82+ds-2) ...
+Setting up libprotobuf-lite32:amd64 (3.21.12-1ubuntu7) ...
+Setting up liburi-perl (5.17-1ubuntu1) ...
+Setting up libevent-pthreads-2.1-7:amd64 (2.1.12-stable-8ubuntu3) ...
+Setting up libhttp-date-perl (6.05-2) ...
+Setting up mecab-ipadic (2.7.0-20070801+main-3) ...
+Compiling IPA dictionary for Mecab.  This takes long time...
+reading /usr/share/mecab/dic/ipadic/unk.def ... 40
+emitting double-array: 100% |###########################################|
+/usr/share/mecab/dic/ipadic/model.def is not found. skipped.
+reading /usr/share/mecab/dic/ipadic/Noun.place.csv ... 72999
+reading /usr/share/mecab/dic/ipadic/Suffix.csv ... 1393
+reading /usr/share/mecab/dic/ipadic/Noun.demonst.csv ... 120
+reading /usr/share/mecab/dic/ipadic/Others.csv ... 2
+reading /usr/share/mecab/dic/ipadic/Adnominal.csv ... 135
+reading /usr/share/mecab/dic/ipadic/Noun.org.csv ... 16668
+reading /usr/share/mecab/dic/ipadic/Conjunction.csv ... 171
+reading /usr/share/mecab/dic/ipadic/Interjection.csv ... 252
+reading /usr/share/mecab/dic/ipadic/Noun.proper.csv ... 27328
+reading /usr/share/mecab/dic/ipadic/Noun.adverbal.csv ... 795
+reading /usr/share/mecab/dic/ipadic/Noun.number.csv ... 42
+reading /usr/share/mecab/dic/ipadic/Filler.csv ... 19
+reading /usr/share/mecab/dic/ipadic/Noun.others.csv ... 151
+reading /usr/share/mecab/dic/ipadic/Noun.nai.csv ... 42
+reading /usr/share/mecab/dic/ipadic/Symbol.csv ... 208
+reading /usr/share/mecab/dic/ipadic/Prefix.csv ... 221
+reading /usr/share/mecab/dic/ipadic/Noun.adjv.csv ... 3328
+reading /usr/share/mecab/dic/ipadic/Postp.csv ... 146
+reading /usr/share/mecab/dic/ipadic/Verb.csv ... 130750
+reading /usr/share/mecab/dic/ipadic/Adverb.csv ... 3032
+reading /usr/share/mecab/dic/ipadic/Postp-col.csv ... 91
+reading /usr/share/mecab/dic/ipadic/Noun.csv ... 60477
+reading /usr/share/mecab/dic/ipadic/Noun.name.csv ... 34202
+reading /usr/share/mecab/dic/ipadic/Adj.csv ... 27210
+reading /usr/share/mecab/dic/ipadic/Noun.verbal.csv ... 12146
+reading /usr/share/mecab/dic/ipadic/Auxil.csv ... 199
+emitting double-array: 100% |###########################################|
+reading /usr/share/mecab/dic/ipadic/matrix.def ... 1316x1316
+emitting matrix      : 100% |###########################################|
+
+done!
+update-alternatives: using /var/lib/mecab/dic/ipadic to provide /var/lib/mecab/dic/debian (mecab-dictionary) in auto mode
+Setting up mysql-server-core-8.0 (8.0.35-0ubuntu0.23.04.1) ...
+Setting up mecab-ipadic-utf8 (2.7.0-20070801+main-3) ...
+Compiling IPA dictionary for Mecab.  This takes long time...
+reading /usr/share/mecab/dic/ipadic/unk.def ... 40
+emitting double-array: 100% |###########################################|
+/usr/share/mecab/dic/ipadic/model.def is not found. skipped.
+reading /usr/share/mecab/dic/ipadic/Noun.place.csv ... 72999
+reading /usr/share/mecab/dic/ipadic/Suffix.csv ... 1393
+reading /usr/share/mecab/dic/ipadic/Noun.demonst.csv ... 120
+reading /usr/share/mecab/dic/ipadic/Others.csv ... 2
+reading /usr/share/mecab/dic/ipadic/Adnominal.csv ... 135
+reading /usr/share/mecab/dic/ipadic/Noun.org.csv ... 16668
+reading /usr/share/mecab/dic/ipadic/Conjunction.csv ... 171
+reading /usr/share/mecab/dic/ipadic/Interjection.csv ... 252
+reading /usr/share/mecab/dic/ipadic/Noun.proper.csv ... 27328
+reading /usr/share/mecab/dic/ipadic/Noun.adverbal.csv ... 795
+reading /usr/share/mecab/dic/ipadic/Noun.number.csv ... 42
+reading /usr/share/mecab/dic/ipadic/Filler.csv ... 19
+reading /usr/share/mecab/dic/ipadic/Noun.others.csv ... 151
+reading /usr/share/mecab/dic/ipadic/Noun.nai.csv ... 42
+reading /usr/share/mecab/dic/ipadic/Symbol.csv ... 208
+reading /usr/share/mecab/dic/ipadic/Prefix.csv ... 221
+reading /usr/share/mecab/dic/ipadic/Noun.adjv.csv ... 3328
+reading /usr/share/mecab/dic/ipadic/Postp.csv ... 146
+reading /usr/share/mecab/dic/ipadic/Verb.csv ... 130750
+reading /usr/share/mecab/dic/ipadic/Adverb.csv ... 3032
+reading /usr/share/mecab/dic/ipadic/Postp-col.csv ... 91
+reading /usr/share/mecab/dic/ipadic/Noun.csv ... 60477
+reading /usr/share/mecab/dic/ipadic/Noun.name.csv ... 34202
+reading /usr/share/mecab/dic/ipadic/Adj.csv ... 27210
+reading /usr/share/mecab/dic/ipadic/Noun.verbal.csv ... 12146
+reading /usr/share/mecab/dic/ipadic/Auxil.csv ... 199
+emitting double-array: 100% |###########################################|
+reading /usr/share/mecab/dic/ipadic/matrix.def ... 1316x1316
+emitting matrix      : 100% |###########################################|
+
+done!
+update-alternatives: using /var/lib/mecab/dic/ipadic-utf8 to provide /var/lib/mecab/dic/debian (mecab-dictionary) in auto mode
+Setting up libhtml-parser-perl:amd64 (3.81-1) ...
+Setting up libhttp-message-perl (6.44-1) ...
+Setting up mysql-server-8.0 (8.0.35-0ubuntu0.23.04.1) ...
+update-alternatives: using /etc/mysql/mysql.cnf to provide /etc/mysql/my.cnf (my.cnf) in auto mode
+Renaming removed key_buffer and myisam-recover options (if present)
+mysqld will log errors to /var/log/mysql/error.log
+mysqld is running as pid 3374
+Created symlink /etc/systemd/system/multi-user.target.wants/mysql.service → /lib/systemd/system/mysql.service.
+Setting up libcgi-pm-perl (4.55-1) ...
+Setting up libhtml-template-perl (2.97-2) ...
+Setting up mysql-server (8.0.35-0ubuntu0.23.04.1) ...
+Setting up libcgi-fast-perl (1:2.15-1) ...
+Processing triggers for man-db (2.11.2-1) ...
+Processing triggers for libc-bin (2.37-0ubuntu2.2) ...
+Scanning processes...
+Scanning processor microcode...
+Scanning linux images...
+
+Running kernel seems to be up-to-date.
+
+Failed to check for processor microcode upgrades.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+root@srvu23:/home/user# apt remove htop
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  libnl-3-200 libnl-genl-3-200 sgml-base
+Use 'sudo apt autoremove' to remove them.
+The following packages will be REMOVED:
+  htop ubuntu-server
+0 upgraded, 0 newly installed, 2 to remove and 49 not upgraded.
+After this operation, 416 kB disk space will be freed.
+Do you want to continue? [Y/n] y
+(Reading database ... 76172 files and directories currently installed.)
+Removing ubuntu-server (1.501) ...
+Removing htop (3.2.2-1) ...
+Processing triggers for man-db (2.11.2-1) ...
+root@srvu23:/home/user# apt install htop -y
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Suggested packages:
+  lm-sensors
+The following NEW packages will be installed:
+  htop
+0 upgraded, 1 newly installed, 0 to remove and 49 not upgraded.
+Need to get 157 kB of archives.
+After this operation, 402 kB of additional disk space will be used.
+Get:1 http://ru.archive.ubuntu.com/ubuntu lunar/main amd64 htop amd64 3.2.2-1 [157 kB]
+Fetched 157 kB in 1s (189 kB/s)
+Selecting previously unselected package htop.
+(Reading database ... 76159 files and directories currently installed.)
+Preparing to unpack .../htop_3.2.2-1_amd64.deb ...
+Unpacking htop (3.2.2-1) ...
+Setting up htop (3.2.2-1) ...
+Processing triggers for man-db (2.11.2-1) ...
+Scanning processes...
+Scanning processor microcode...
+Scanning linux images...
+
+Running kernel seems to be up-to-date.
+
+Failed to check for processor microcode upgrades.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+root@srvu23:/home/user# htop
+root@srvu23:/home/user# history > command_history.txt
+root@srvu23:/home/user# cat command_history.txt
+    1  cd ./
+    2  cd
+    3  cd ./
+    4  cd ..
+    5  echo "Dog, Cat, Hamsters" > "Pets"
+    6  echo "Horses, Camels, Donkeys" > "Pack_animals"
+    7  cat "" mals"
+1
+q
+    8  cat "Pets" "Pack_animals" > "animal_friends"
+    9  cat animal_friends
+   10  mv "animal_friends" "new_animal_friends"
+   11  cat new_anumal_friends
+   12  cat new_animal_friends
+   13  sudo add-apt-repository 'deb http://repo.mysql.com/apt/ubuntu/ bionic mysql-8.0'
+   14  sudo apt update
+   15  sudo apt install mysql-server
+   16  apt remove htop
+   17  apt install htop -y
+   18  htop
+   19  history > command_history.txt
+root@srvu23:/home/user#

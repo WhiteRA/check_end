@@ -1,0 +1,14 @@
+ echo "Dog, Cat, Hamsters" > "Pets"
+ echo "Horses, Camels, Donkeys" > "Pack_animals"
+ cat "Pets" "Pack_animals" > "animal_friends"
+ cat animal_friends
+ mv "animal_friends" "new_animal_friends"
+ cat new_anumal_friends
+ cat new_animal_friends
+ sudo add-apt-repository 'deb http://repo.mysql.com/apt/ubuntu/ bionic mysql-8.0'
+ sudo apt update
+ sudo apt install mysql-server
+ apt remove htop
+ apt install htop -y
+ htop
+ history > command_history.txt
