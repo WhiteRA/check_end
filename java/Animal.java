@@ -1,12 +1,10 @@
-public class Animal {
+class Animal {
     private String name;
     private String command;
-    private String birthDate;
 
-    public Animal(String name, String command, String birthDate) {
+    public Animal(String name, String command) {
         this.name = name;
         this.command = command;
-        this.birthDate = birthDate;
     }
 
     public String getName() {
@@ -15,10 +13,6 @@ public class Animal {
 
     public String getCommand() {
         return command;
-    }
-
-    public String getBirthDate() {
-        return birthDate;
     }
 
     public void setCommand(String command) {
