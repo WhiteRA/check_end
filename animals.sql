@@ -1,6 +1,10 @@
 
 CREATE DATABASE IF NOT EXISTS `human_friends`;
+<<<<<<< HEAD
 USE human_friends;
+=======
+use human_friends;
+>>>>>>> c87b741ae030d22196afcbefb58356e2cb38cf15
 CREATE TABLE Pets (
     id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(255),
